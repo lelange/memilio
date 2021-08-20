@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['memilio_576',['Memilio',['../index.html',1,'']]],
+  ['memilio_20_2d_20a_20high_20performance_20modular_20epidemics_20simulation_20software_576',['MEmilio - a high performance Modular EpideMIcs simuLatIOn software',['../index.html',1,'']]],
   ['m_5fabs_5ftol_577',['m_abs_tol',['../classepi_1_1RKIntegratorCore.html#ad1178e43b8fe188b4a8ac29cc4796990',1,'epi::RKIntegratorCore::m_abs_tol()'],['../classepi_1_1ImplicitEulerIntegratorCore.html#a9612125cd529907e0fe1ce478477e1f2',1,'epi::ImplicitEulerIntegratorCore::m_abs_tol()']]],
   ['m_5faccumulated_5fdampings_5fcached_578',['m_accumulated_dampings_cached',['../classepi_1_1Dampings.html#a562ddb354f95a34ef7181697fe00026a',1,'epi::Dampings']]],
   ['m_5fage_579',['m_age',['../classepi_1_1Person.html#a65be74f52c4ac27202839b241339d5ab',1,'epi::Person']]],
