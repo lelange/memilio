@@ -2340,18 +2340,16 @@
                 <td>R0801</td>
                 <td></td>
                 <td><pre>Similar lines in 2 files
-==epidemiology.epidata.getPopulationData:100
-==epidemiology.epidata.getRKIData:234
+==epidemiology.epidata.getJHData:[61:69]
+==epidemiology.epidata.getRKIData:[230:238]
+        try:
+            df = pandas.read_json(file_in)
+        except ValueError:
+            exit_string = &#34;Error: The file: &#34; + file_in + &#34; does not exist. Call program without -r flag to get it.&#34;
             sys.exit(exit_string)
     else:
 
-        # Supported data formats:
-        load = {
-            &#39;csv&#39;: gd.loadCsv,
-            &#39;geojson&#39;: gd.loadGeojson
-        }
-
-        # ArcGIS public data item ID:</pre></td>
+        # Supported data formats:</pre></td>
             </tr>
             
             <tr>
@@ -2362,16 +2360,18 @@
                 <td>R0801</td>
                 <td></td>
                 <td><pre>Similar lines in 2 files
-==epidemiology.epidata.getJHData:61
-==epidemiology.epidata.getRKIData:230
-        try:
-            df = pandas.read_json(file_in)
-        except ValueError:
-            exit_string = &#34;Error: The file: &#34; + file_in + &#34; does not exist. Call program without -r flag to get it.&#34;
+==epidemiology.epidata.getPopulationData:[100:110]
+==epidemiology.epidata.getRKIData:[234:244]
             sys.exit(exit_string)
     else:
-        # Get data:
-        # https://raw.githubusercontent.com/datasets/covid-19/master/data/time-series-19-covid-combined.csv</pre></td>
+
+        # Supported data formats:
+        load = {
+            &#39;csv&#39;: gd.loadCsv,
+            &#39;geojson&#39;: gd.loadGeojson
+        }
+
+        # Get data:</pre></td>
             </tr>
             
             <tr>
