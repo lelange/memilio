@@ -153,9 +153,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a5bcb8b5871cb0b093afc928e70ccc89e"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5bcb8b5871cb0b093afc928e70ccc89e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi_1_1details.html#a5bcb8b5871cb0b093afc928e70ccc89e">FlattenIOResultT</a> = typename <a class="el" href="structepi_1_1details_1_1FlattenIOResult.html">FlattenIOResult</a>&lt; T &gt;::Type</td></tr>
 <tr class="separator:a5bcb8b5871cb0b093afc928e70ccc89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4fdf59db4be5e4f018cad8662eef75e"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
-<tr class="memitem:ad4fdf59db4be5e4f018cad8662eef75e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi_1_1details.html#ad4fdf59db4be5e4f018cad8662eef75e">IsElementReference</a> = std::is_reference&lt; decltype(std::declval&lt; M &gt;()[std::declval&lt; Eigen::Index &gt;()])&gt;</td></tr>
-<tr class="separator:ad4fdf59db4be5e4f018cad8662eef75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd30df2f588966f391bf5a9f25e3418"><td class="memTemplParams" colspan="2">template&lt;class M &gt; </td></tr>
+<tr class="memitem:addd30df2f588966f391bf5a9f25e3418"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi_1_1details.html#addd30df2f588966f391bf5a9f25e3418">IsElementReference</a> = std::is_reference&lt; decltype(std::declval&lt; M &gt;()(std::declval&lt; Eigen::Index &gt;(), std::declval&lt; Eigen::Index &gt;()))&gt;</td></tr>
+<tr class="separator:addd30df2f588966f391bf5a9f25e3418"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11f82c1c76b921d60c5f56a711cb51ee"><td class="memTemplParams" colspan="2">template&lt;class Tup &gt; </td></tr>
 <tr class="memitem:a11f82c1c76b921d60c5f56a711cb51ee"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi_1_1details.html#a11f82c1c76b921d60c5f56a711cb51ee">tuple_size_value_t</a> = decltype(std::tuple_size&lt; Tup &gt;::value)</td></tr>
 <tr class="separator:a11f82c1c76b921d60c5f56a711cb51ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -322,8 +322,8 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="ad4fdf59db4be5e4f018cad8662eef75e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4fdf59db4be5e4f018cad8662eef75e">&#9670;&nbsp;</a></span>IsElementReference</h2>
+<a id="addd30df2f588966f391bf5a9f25e3418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd30df2f588966f391bf5a9f25e3418">&#9670;&nbsp;</a></span>IsElementReference</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,7 +331,7 @@ template&lt;class T &gt; </div>
 template&lt;class M &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespaceepi_1_1details.html#ad4fdf59db4be5e4f018cad8662eef75e">epi::details::IsElementReference</a> = typedef std::is_reference&lt;decltype(std::declval&lt;M&gt;()[std::declval&lt;Eigen::Index&gt;()])&gt;</td>
+          <td class="memname">using <a class="el" href="namespaceepi_1_1details.html#addd30df2f588966f391bf5a9f25e3418">epi::details::IsElementReference</a> = typedef std::is_reference&lt;decltype(std::declval&lt;M&gt;()(std::declval&lt;Eigen::Index&gt;(), std::declval&lt;Eigen::Index&gt;()))&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

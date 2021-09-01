@@ -48,7 +48,7 @@ var searchData=
   ['m_5flog_5fstddev_5fchange_2029',['m_log_stddev_change',['../classepi_1_1ParameterDistributionNormal.html#a51af564284dac867b9e858b054661862',1,'epi::ParameterDistributionNormal']]],
   ['m_5flower_5fbound_2030',['m_lower_bound',['../classepi_1_1ParameterDistribution.html#aa3e76c9aab7db312413a63627482dd81',1,'epi::ParameterDistribution']]],
   ['m_5fmatrices_2031',['m_matrices',['../classepi_1_1DampingMatrixExpressionGroup.html#a3d9462fc3ae5b2aad74193011bfeb93f',1,'epi::DampingMatrixExpressionGroup::m_matrices()'],['../classepi_1_1DampingSampling.html#a92f113980ccd7c6d76545b2e014f38a2',1,'epi::DampingSampling::m_matrices()']]],
-  ['m_5fmatrix_2032',['m_matrix',['../classepi_1_1RowMajorIterator.html#a4ec78ce7a3ee066a565d08e3e9647a1a',1,'epi::RowMajorIterator::m_matrix()'],['../classepi_1_1details_1_1TimeSeriesIteratorBase.html#a50c08975f53ee2d7d8d4903140227ed1',1,'epi::details::TimeSeriesIteratorBase::m_matrix()']]],
+  ['m_5fmatrix_2032',['m_matrix',['../classepi_1_1RowMajorIterator.html#ae8549cb33faca0df54471a6b782f6e65',1,'epi::RowMajorIterator::m_matrix()'],['../classepi_1_1details_1_1TimeSeriesIteratorBase.html#a50c08975f53ee2d7d8d4903140227ed1',1,'epi::details::TimeSeriesIteratorBase::m_matrix()']]],
   ['m_5fmean_2033',['m_mean',['../classepi_1_1ParameterDistributionNormal.html#a75ff3465024de790e3c565b2aec5807e',1,'epi::ParameterDistributionNormal']]],
   ['m_5fmigrated_2034',['m_migrated',['../classepi_1_1MigrationEdge.html#ad9e7a2f813a360326d1f02b6337aea74',1,'epi::MigrationEdge']]],
   ['m_5fmigration_5fparameters_2035',['m_migration_parameters',['../classepi_1_1World.html#a688192ce8d1a8005c02a8c6a1ea3495e',1,'epi::World']]],
