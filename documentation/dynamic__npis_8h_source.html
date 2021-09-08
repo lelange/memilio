@@ -274,25 +274,26 @@ $(function() {
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="comment">//a damping is obsolete if the most recent damping of the same type and level has the same value</span></div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; damping_expr : damping_expr_group) {</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="comment">//go from the back so indices aren&#39;t invalidated when dampings are removed</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keyword">auto</span> dampings = damping_expr.get_dampings();</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = dampings.rbegin(); it != dampings.rend() - 1; ++it) {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <span class="comment">//look for previous damping of the same type/level</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="keyword">auto</span> it_prev = std::find_if(it + 1, dampings.rend(), [&amp;di = *it](<span class="keyword">auto</span>&amp; dj) {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                return di.get_level() == dj.get_level() &amp;&amp; di.get_type() == dj.get_type();</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            });</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="comment">//remove if match is found and has same value</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <span class="keywordflow">if</span> (it_prev != dampings.rend() &amp;&amp; it-&gt;get_coeffs() == it_prev-&gt;get_coeffs()) {</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                <span class="keyword">auto</span> i = (it.base() - 1) - dampings.begin();</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                damping_expr.remove_damping(i);</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            }</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        }</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;} <span class="comment">// namespace epi</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="comment">//use indices to loop instead of reverse iterators because removing invalidates the current iterator</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = <span class="keywordtype">size_t</span>(0); i &lt; damping_expr.get_dampings().size() - 1; ++i) {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <span class="keyword">auto</span> it = damping_expr.get_dampings().rbegin() + i;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="comment">//look for previous damping of the same type/level</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <span class="keyword">auto</span> it_prev = std::find_if(it + 1, damping_expr.get_dampings().rend(), [&amp;di = *it](<span class="keyword">auto</span>&amp; dj) {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                return di.get_level() == dj.get_level() &amp;&amp; di.get_type() == dj.get_type();</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            });</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <span class="comment">//remove if match is found and has same value</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keywordflow">if</span> (it_prev != damping_expr.get_dampings().rend() &amp;&amp; it-&gt;get_coeffs() == it_prev-&gt;get_coeffs()) {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                damping_expr.remove_damping(damping_expr.get_dampings().size() - 1 - i);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;}</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;} <span class="comment">// namespace epi</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassepi_1_1DynamicNPIs_html_acf3b13a89825cab71ab4cf1c1fa99a3c"><div class="ttname"><a href="classepi_1_1DynamicNPIs.html#acf3b13a89825cab71ab4cf1c1fa99a3c">epi::DynamicNPIs::set_base_value</a></div><div class="ttdeci">void set_base_value(double v)</div><div class="ttdef"><b>Definition:</b> dynamic_npis.h:136</div></div>
 <div class="ttc" id="aclassepi_1_1DynamicNPIs_html_a78b4806b70f5849ad7cdfb29b3e706ef"><div class="ttname"><a href="classepi_1_1DynamicNPIs.html#a78b4806b70f5849ad7cdfb29b3e706ef">epi::DynamicNPIs::set_threshold</a></div><div class="ttdeci">void set_threshold(double threshold, const std::vector&lt; DampingSampling &gt; &amp;dampings)</div><div class="ttdoc">set a threshold and the NPIs that should be enacted.</div><div class="ttdef"><b>Definition:</b> dynamic_npis.h:43</div></div>
