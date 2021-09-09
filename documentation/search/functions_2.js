@@ -24,7 +24,7 @@ var searchData=
   ['contains_1508',['contains',['../namespaceepi.html#a5a579d7464e37419ca1df9411caee4ae',1,'epi']]],
   ['count_5flines_1509',['count_lines',['../namespaceepi.html#a6b5123237a88879be47114904097da2c',1,'epi']]],
   ['crbegin_1510',['crbegin',['../classepi_1_1TimeSeries.html#ab072cad75a5e5b436563c37e2ef8d69f',1,'epi::TimeSeries']]],
-  ['create_5fdirectory_1511',['create_directory',['../namespaceepi.html#a0f7ec077532895e9729cc5ae46470dd9',1,'epi']]],
+  ['create_5fdirectory_1511',['create_directory',['../namespaceepi.html#a0f7ec077532895e9729cc5ae46470dd9',1,'epi::create_directory(std::string const  &amp;rel_path, std::string &amp;abs_path)'],['../namespaceepi.html#af67d2d9cff491983eb7023fd7b8120d0',1,'epi::create_directory(std::string const  &amp;rel_path)']]],
   ['create_5fobject_1512',['create_object',['../classepi_1_1JsonContext.html#a96c35ebbbd104f41f7461d6418bc1b8a',1,'epi::JsonContext']]],
   ['create_5fsampled_5fsimulation_1513',['create_sampled_simulation',['../classepi_1_1ParameterStudy.html#a0e0e90b735d870965ef8e36e282f7032',1,'epi::ParameterStudy']]],
   ['crend_1514',['crend',['../classepi_1_1TimeSeries.html#a857a5ea395a67c87037a7d00a03f1369',1,'epi::TimeSeries']]],

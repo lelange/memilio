@@ -59,7 +59,7 @@ var searchData=
   ['count_5flines_121',['count_lines',['../namespaceepi.html#a6b5123237a88879be47114904097da2c',1,'epi']]],
   ['county_122',['County',['../namespaceepidemiology_1_1epidata_1_1defaultDict.html#a958f7495d699cfcbaa1f72d959569708',1,'epidemiology::epidata::defaultDict']]],
   ['crbegin_123',['crbegin',['../classepi_1_1TimeSeries.html#ab072cad75a5e5b436563c37e2ef8d69f',1,'epi::TimeSeries']]],
-  ['create_5fdirectory_124',['create_directory',['../namespaceepi.html#a0f7ec077532895e9729cc5ae46470dd9',1,'epi']]],
+  ['create_5fdirectory_124',['create_directory',['../namespaceepi.html#a0f7ec077532895e9729cc5ae46470dd9',1,'epi::create_directory(std::string const  &amp;rel_path, std::string &amp;abs_path)'],['../namespaceepi.html#af67d2d9cff491983eb7023fd7b8120d0',1,'epi::create_directory(std::string const  &amp;rel_path)']]],
   ['create_5fobject_125',['create_object',['../classepi_1_1JsonContext.html#a96c35ebbbd104f41f7461d6418bc1b8a',1,'epi::JsonContext']]],
   ['create_5fsampled_5fsimulation_126',['create_sampled_simulation',['../classepi_1_1ParameterStudy.html#a0e0e90b735d870965ef8e36e282f7032',1,'epi::ParameterStudy']]],
   ['crend_127',['crend',['../classepi_1_1TimeSeries.html#a857a5ea395a67c87037a7d00a03f1369',1,'epi::TimeSeries']]],

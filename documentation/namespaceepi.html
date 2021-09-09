@@ -827,8 +827,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a6b5123237a88879be47114904097da2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a6b5123237a88879be47114904097da2c">count_lines</a> (const std::string &amp;filename)</td></tr>
 <tr class="memdesc:a6b5123237a88879be47114904097da2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts lines of txt file.  <a href="namespaceepi.html#a6b5123237a88879be47114904097da2c">More...</a><br /></td></tr>
 <tr class="separator:a6b5123237a88879be47114904097da2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af67d2d9cff491983eb7023fd7b8120d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#af67d2d9cff491983eb7023fd7b8120d0">create_directory</a> (std::string const  &amp;rel_path)</td></tr>
+<tr class="memdesc:af67d2d9cff491983eb7023fd7b8120d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a directory in the file system.  <a href="namespaceepi.html#af67d2d9cff491983eb7023fd7b8120d0">More...</a><br /></td></tr>
+<tr class="separator:af67d2d9cff491983eb7023fd7b8120d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f7ec077532895e9729cc5ae46470dd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a0f7ec077532895e9729cc5ae46470dd9">create_directory</a> (std::string const  &amp;rel_path, std::string &amp;abs_path)</td></tr>
-<tr class="memdesc:a0f7ec077532895e9729cc5ae46470dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a directory on the file system returns true if the creation was successful.  <a href="namespaceepi.html#a0f7ec077532895e9729cc5ae46470dd9">More...</a><br /></td></tr>
+<tr class="memdesc:a0f7ec077532895e9729cc5ae46470dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a directory in the file system.  <a href="namespaceepi.html#a0f7ec077532895e9729cc5ae46470dd9">More...</a><br /></td></tr>
 <tr class="separator:a0f7ec077532895e9729cc5ae46470dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1756628093347c730580c8fb835dd620"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classepi_1_1TimeSpan.html">TimeSpan</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a1756628093347c730580c8fb835dd620">days</a> (int days)</td></tr>
 <tr class="memdesc:a1756628093347c730580c8fb835dd620"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a <a class="el" href="classepi_1_1TimeSpan.html" title="a duration of time.">TimeSpan</a> with a specified number of days.  <a href="namespaceepi.html#a1756628093347c730580c8fb835dd620">More...</a><br /></td></tr>
@@ -895,10 +898,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ab5773aad4934841325a3bc52203919ce"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classepi_1_1TimeSeries.html">TimeSeries</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#ab5773aad4934841325a3bc52203919ce">ensemble_mean</a> (const std::vector&lt; std::vector&lt; <a class="el" href="classepi_1_1TimeSeries.html">TimeSeries</a>&lt; double &gt;&gt;&gt; &amp;ensemble_results)</td></tr>
 <tr class="memdesc:ab5773aad4934841325a3bc52203919ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">computes mean of each compartment, node, and time point over all runs input must be uniform as returned by interpolated_ensemble_result: same number of nodes, same time points and elements.  <a href="namespaceepi.html#ab5773aad4934841325a3bc52203919ce">More...</a><br /></td></tr>
 <tr class="separator:ab5773aad4934841325a3bc52203919ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25449979ca4978e1051da564a9b47c21"><td class="memTemplParams" colspan="2">template&lt;class Simulation &gt; </td></tr>
-<tr class="memitem:a25449979ca4978e1051da564a9b47c21"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classepi_1_1Simulation.html">Simulation</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a25449979ca4978e1051da564a9b47c21">ensemble_params_percentile</a> (const std::vector&lt; std::vector&lt; <a class="el" href="classepi_1_1Simulation.html">Simulation</a> &gt;&gt; &amp;ensemble_params, double p)</td></tr>
-<tr class="memdesc:a25449979ca4978e1051da564a9b47c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">computes the p percentile of the parameters for each node.  <a href="namespaceepi.html#a25449979ca4978e1051da564a9b47c21">More...</a><br /></td></tr>
-<tr class="separator:a25449979ca4978e1051da564a9b47c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63265d6480ad7cc9f18beedbd0c2bd99"><td class="memTemplParams" colspan="2">template&lt;class Model &gt; </td></tr>
+<tr class="memitem:a63265d6480ad7cc9f18beedbd0c2bd99"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Model &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a63265d6480ad7cc9f18beedbd0c2bd99">ensemble_params_percentile</a> (const std::vector&lt; std::vector&lt; Model &gt;&gt; &amp;ensemble_params, double p)</td></tr>
+<tr class="memdesc:a63265d6480ad7cc9f18beedbd0c2bd99"><td class="mdescLeft">&#160;</td><td class="mdescRight">computes the p percentile of the parameters for each node.  <a href="namespaceepi.html#a63265d6480ad7cc9f18beedbd0c2bd99">More...</a><br /></td></tr>
+<tr class="separator:a63265d6480ad7cc9f18beedbd0c2bd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a151df8ac841d0287fa4e9b69b35a56a8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classepi_1_1TimeSeries.html">TimeSeries</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a151df8ac841d0287fa4e9b69b35a56a8">ensemble_percentile</a> (const std::vector&lt; std::vector&lt; <a class="el" href="classepi_1_1TimeSeries.html">TimeSeries</a>&lt; double &gt;&gt;&gt; &amp;ensemble_result, double p)</td></tr>
 <tr class="memdesc:a151df8ac841d0287fa4e9b69b35a56a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">computes the p percentile of the result for each compartment, node, and time point.  <a href="namespaceepi.html#a151df8ac841d0287fa4e9b69b35a56a8">More...</a><br /></td></tr>
 <tr class="separator:a151df8ac841d0287fa4e9b69b35a56a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1147,10 +1150,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a12182cdd3c2108a61069855e9bc9f976"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a12182cdd3c2108a61069855e9bc9f976">random_transition</a> (T current_state, <a class="el" href="classepi_1_1TimeSpan.html">TimeSpan</a> dt, const std::pair&lt; T, double &gt;(&amp;transitions)[NumTransitions])</td></tr>
 <tr class="memdesc:a12182cdd3c2108a61069855e9bc9f976"><td class="mdescLeft">&#160;</td><td class="mdescRight">select a random transition from a list of possible transitions from the current state to others.  <a href="namespaceepi.html#a12182cdd3c2108a61069855e9bc9f976">More...</a><br /></td></tr>
 <tr class="separator:a12182cdd3c2108a61069855e9bc9f976"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a064fff68ca20b2c3f0b2a773f089bd26"><td class="memTemplParams" colspan="2">template&lt;class Model &gt; </td></tr>
-<tr class="memitem:a064fff68ca20b2c3f0b2a773f089bd26"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; <a class="el" href="classepi_1_1Graph.html">Graph</a>&lt; Model, <a class="el" href="classepi_1_1MigrationParameters.html">MigrationParameters</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a064fff68ca20b2c3f0b2a773f089bd26">read_graph</a> (const std::string &amp;directory)</td></tr>
-<tr class="memdesc:a064fff68ca20b2c3f0b2a773f089bd26"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads graph json files and returns a simulation graph.  <a href="namespaceepi.html#a064fff68ca20b2c3f0b2a773f089bd26">More...</a><br /></td></tr>
-<tr class="separator:a064fff68ca20b2c3f0b2a773f089bd26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70f469d232b6a3b17f9748465a62acf"><td class="memTemplParams" colspan="2">template&lt;class Model &gt; </td></tr>
+<tr class="memitem:ac70f469d232b6a3b17f9748465a62acf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; <a class="el" href="classepi_1_1Graph.html">Graph</a>&lt; Model, <a class="el" href="classepi_1_1MigrationParameters.html">MigrationParameters</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi.html#ac70f469d232b6a3b17f9748465a62acf">read_graph</a> (const std::string &amp;directory, int ioflags=<a class="el" href="namespaceepi.html#a1bf67eb2c517123112248a0025645724a4f2803def6b19ccb754ef1a077a79b01">IOF_None</a>)</td></tr>
+<tr class="memdesc:ac70f469d232b6a3b17f9748465a62acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads graph json files and returns a simulation graph.  <a href="namespaceepi.html#ac70f469d232b6a3b17f9748465a62acf">More...</a><br /></td></tr>
+<tr class="separator:ac70f469d232b6a3b17f9748465a62acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f8939e488603b6fe019d5ba85e0afad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; Json::Value &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a9f8939e488603b6fe019d5ba85e0afad">read_json</a> (const std::string &amp;path)</td></tr>
 <tr class="memdesc:a9f8939e488603b6fe019d5ba85e0afad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a json value from a file.  <a href="namespaceepi.html#a9f8939e488603b6fe019d5ba85e0afad">More...</a><br /></td></tr>
 <tr class="separator:a9f8939e488603b6fe019d5ba85e0afad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1164,10 +1167,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a53d4ad2f5843dc2359c155c733b9295b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; Eigen::MatrixXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a53d4ad2f5843dc2359c155c733b9295b">read_mobility_plain</a> (const std::string &amp;filename)</td></tr>
 <tr class="memdesc:a53d4ad2f5843dc2359c155c733b9295b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads txt migration data or contact which is given by values only and separated by spaces.  <a href="namespaceepi.html#a53d4ad2f5843dc2359c155c733b9295b">More...</a><br /></td></tr>
 <tr class="separator:a53d4ad2f5843dc2359c155c733b9295b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab937b90232dd6ce6b6c31ce6e8dce5c6"><td class="memTemplParams" colspan="2">template&lt;class Model &gt; </td></tr>
-<tr class="memitem:ab937b90232dd6ce6b6c31ce6e8dce5c6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi.html#ab937b90232dd6ce6b6c31ce6e8dce5c6">read_population_data_county</a> (std::vector&lt; Model &gt; &amp;model, <a class="el" href="structepi_1_1Date.html">Date</a> date, std::vector&lt; int &gt; county, const std::vector&lt; double &gt; &amp;scaling_factor_inf, double scaling_factor_icu, const std::string &amp;dir)</td></tr>
-<tr class="memdesc:ab937b90232dd6ce6b6c31ce6e8dce5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads population data from population files for the specefied county  <a href="namespaceepi.html#ab937b90232dd6ce6b6c31ce6e8dce5c6">More...</a><br /></td></tr>
-<tr class="separator:ab937b90232dd6ce6b6c31ce6e8dce5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95bb05811835f12b6509f65fefb08624"><td class="memTemplParams" colspan="2">template&lt;class Model &gt; </td></tr>
+<tr class="memitem:a95bb05811835f12b6509f65fefb08624"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a95bb05811835f12b6509f65fefb08624">read_population_data_county</a> (std::vector&lt; Model &gt; &amp;model, <a class="el" href="structepi_1_1Date.html">Date</a> date, const std::vector&lt; int &gt; &amp;county, const std::vector&lt; double &gt; &amp;scaling_factor_inf, double scaling_factor_icu, const std::string &amp;dir)</td></tr>
+<tr class="memdesc:a95bb05811835f12b6509f65fefb08624"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads population data from population files for the specefied county  <a href="namespaceepi.html#a95bb05811835f12b6509f65fefb08624">More...</a><br /></td></tr>
+<tr class="separator:a95bb05811835f12b6509f65fefb08624"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8a2a738cb0ff1f34dd754502a45665a"><td class="memTemplParams" colspan="2">template&lt;class Model &gt; </td></tr>
 <tr class="memitem:af8a2a738cb0ff1f34dd754502a45665a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi.html#af8a2a738cb0ff1f34dd754502a45665a">read_population_data_germany</a> (std::vector&lt; Model &gt; &amp;model, <a class="el" href="structepi_1_1Date.html">Date</a> date, const std::vector&lt; double &gt; &amp;scaling_factor_inf, double scaling_factor_icu, const std::string &amp;dir)</td></tr>
 <tr class="memdesc:af8a2a738cb0ff1f34dd754502a45665a"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads population data from population files for the whole country  <a href="namespaceepi.html#af8a2a738cb0ff1f34dd754502a45665a">More...</a><br /></td></tr>
@@ -1283,10 +1286,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a857d9dfd1881502919d7dca04d65b73f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a857d9dfd1881502919d7dca04d65b73f">unused</a> (T &amp;&amp;...)</td></tr>
 <tr class="memdesc:a857d9dfd1881502919d7dca04d65b73f"><td class="mdescLeft">&#160;</td><td class="mdescRight">does nothing, can be used to mark variables as not used.  <a href="namespaceepi.html#a857d9dfd1881502919d7dca04d65b73f">More...</a><br /></td></tr>
 <tr class="separator:a857d9dfd1881502919d7dca04d65b73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aead564b23dc8fa7686dc9fa1140c6ab1"><td class="memTemplParams" colspan="2">template&lt;class Model &gt; </td></tr>
-<tr class="memitem:aead564b23dc8fa7686dc9fa1140c6ab1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi.html#aead564b23dc8fa7686dc9fa1140c6ab1">write_graph</a> (const <a class="el" href="classepi_1_1Graph.html">Graph</a>&lt; Model, <a class="el" href="classepi_1_1MigrationParameters.html">MigrationParameters</a> &gt; &amp;graph, const std::string &amp;directory)</td></tr>
-<tr class="memdesc:aead564b23dc8fa7686dc9fa1140c6ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates json files for each node in a simulation graph.  <a href="namespaceepi.html#aead564b23dc8fa7686dc9fa1140c6ab1">More...</a><br /></td></tr>
-<tr class="separator:aead564b23dc8fa7686dc9fa1140c6ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2cc48c909d42717f5ea6b15767b7ca1"><td class="memTemplParams" colspan="2">template&lt;class Model &gt; </td></tr>
+<tr class="memitem:ab2cc48c909d42717f5ea6b15767b7ca1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi.html#ab2cc48c909d42717f5ea6b15767b7ca1">write_graph</a> (const <a class="el" href="classepi_1_1Graph.html">Graph</a>&lt; Model, <a class="el" href="classepi_1_1MigrationParameters.html">MigrationParameters</a> &gt; &amp;graph, const std::string &amp;directory, int ioflags=<a class="el" href="namespaceepi.html#a1bf67eb2c517123112248a0025645724a4f2803def6b19ccb754ef1a077a79b01">IOF_None</a>)</td></tr>
+<tr class="memdesc:ab2cc48c909d42717f5ea6b15767b7ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates json files for each node in a simulation graph.  <a href="namespaceepi.html#ab2cc48c909d42717f5ea6b15767b7ca1">More...</a><br /></td></tr>
+<tr class="separator:ab2cc48c909d42717f5ea6b15767b7ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae41b4e70ad6fc1980e0cc4e4c3dd8540"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#ae41b4e70ad6fc1980e0cc4e4c3dd8540">write_json</a> (const std::string &amp;path, const Json::Value &amp;js_value)</td></tr>
 <tr class="memdesc:ae41b4e70ad6fc1980e0cc4e4c3dd8540"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the json value into a file.  <a href="namespaceepi.html#ae41b4e70ad6fc1980e0cc4e4c3dd8540">More...</a><br /></td></tr>
 <tr class="separator:ae41b4e70ad6fc1980e0cc4e4c3dd8540"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2981,8 +2984,35 @@ template&lt;class Iter , class Pred &gt; </div>
 
 </div>
 </div>
+<a id="af67d2d9cff491983eb7023fd7b8120d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af67d2d9cff491983eb7023fd7b8120d0">&#9670;&nbsp;</a></span>create_directory() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt; bool &gt; epi::create_directory </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>rel_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a directory in the file system. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rel_path</td><td>path of directory relative to current working directory. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the directory was created, false if it already exists, or any errors that occured. </dd></dl>
+
+</div>
+</div>
 <a id="a0f7ec077532895e9729cc5ae46470dd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f7ec077532895e9729cc5ae46470dd9">&#9670;&nbsp;</a></span>create_directory()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7ec077532895e9729cc5ae46470dd9">&#9670;&nbsp;</a></span>create_directory() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3007,7 +3037,15 @@ template&lt;class Iter , class Pred &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a directory on the file system returns true if the creation was successful. </p>
+<p>Creates a directory in the file system. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rel_path</td><td>path of directory relative to current working directory. </td></tr>
+    <tr><td class="paramname">abs_path</td><td>Will contain the absolute path of the directory. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the directory was created, false if it already exists, or any errors that occured. </dd></dl>
 
 </div>
 </div>
@@ -3644,18 +3682,18 @@ template&lt;class M &gt; </div>
 
 </div>
 </div>
-<a id="a25449979ca4978e1051da564a9b47c21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25449979ca4978e1051da564a9b47c21">&#9670;&nbsp;</a></span>ensemble_params_percentile()</h2>
+<a id="a63265d6480ad7cc9f18beedbd0c2bd99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63265d6480ad7cc9f18beedbd0c2bd99">&#9670;&nbsp;</a></span>ensemble_params_percentile()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Simulation &gt; </div>
+template&lt;class Model &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classepi_1_1Simulation.html">Simulation</a>&gt; epi::ensemble_params_percentile </td>
+          <td class="memname">std::vector&lt;Model&gt; epi::ensemble_params_percentile </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; std::vector&lt; <a class="el" href="classepi_1_1Simulation.html">Simulation</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; Model &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>ensemble_params</em>, </td>
         </tr>
         <tr>
@@ -6708,8 +6746,8 @@ template&lt;class T , size_t NumTransitions&gt; </div>
 
 </div>
 </div>
-<a id="a064fff68ca20b2c3f0b2a773f089bd26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a064fff68ca20b2c3f0b2a773f089bd26">&#9670;&nbsp;</a></span>read_graph()</h2>
+<a id="ac70f469d232b6a3b17f9748465a62acf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70f469d232b6a3b17f9748465a62acf">&#9670;&nbsp;</a></span>read_graph()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6720,8 +6758,18 @@ template&lt;class Model &gt; </div>
           <td class="memname"><a class="el" href="namespaceepi.html#a89f5e00dd122b11fad06af0f2e72ee1a">IOResult</a>&lt;<a class="el" href="classepi_1_1Graph.html">Graph</a>&lt;Model, <a class="el" href="classepi_1_1MigrationParameters.html">MigrationParameters</a>&gt; &gt; epi::read_graph </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>directory</em></td><td>)</td>
+          <td class="paramname"><em>directory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ioflags</em> = <code><a class="el" href="namespaceepi.html#a1bf67eb2c517123112248a0025645724a4f2803def6b19ccb754ef1a077a79b01">IOF_None</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -6874,8 +6922,8 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="ab937b90232dd6ce6b6c31ce6e8dce5c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab937b90232dd6ce6b6c31ce6e8dce5c6">&#9670;&nbsp;</a></span>read_population_data_county()</h2>
+<a id="a95bb05811835f12b6509f65fefb08624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95bb05811835f12b6509f65fefb08624">&#9670;&nbsp;</a></span>read_population_data_county()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6897,7 +6945,7 @@ template&lt;class Model &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
+          <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
           <td class="paramname"><em>county</em>, </td>
         </tr>
         <tr>
@@ -8401,8 +8449,8 @@ template&lt;class... T&gt; </div>
 
 </div>
 </div>
-<a id="aead564b23dc8fa7686dc9fa1140c6ab1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aead564b23dc8fa7686dc9fa1140c6ab1">&#9670;&nbsp;</a></span>write_graph()</h2>
+<a id="ab2cc48c909d42717f5ea6b15767b7ca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2cc48c909d42717f5ea6b15767b7ca1">&#9670;&nbsp;</a></span>write_graph()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8419,7 +8467,13 @@ template&lt;class Model &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>directory</em>&#160;</td>
+          <td class="paramname"><em>directory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ioflags</em> = <code><a class="el" href="namespaceepi.html#a1bf67eb2c517123112248a0025645724a4f2803def6b19ccb754ef1a077a79b01">IOF_None</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -8434,6 +8488,7 @@ template&lt;class Model &gt; </div>
   <table class="params">
     <tr><td class="paramname">graph</td><td><a class="el" href="classepi_1_1Graph.html" title="generic graph structure">Graph</a> which should be written </td></tr>
     <tr><td class="paramname">directory</td><td>directory where files should be stored </td></tr>
+    <tr><td class="paramname">ioflags</td><td>flags that set the behavior of serialization; see <a class="el" href="namespaceepi.html#a1bf67eb2c517123112248a0025645724" title="flags to determine the behavior of the serialization process.">epi::IOFlags</a> </td></tr>
   </table>
   </dd>
 </dl>

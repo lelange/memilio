@@ -114,6 +114,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a718bd31c21ffe3298ef0b61c1ea40d0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1UncertainValue.html#a718bd31c21ffe3298ef0b61c1ea40d0a">UncertainValue</a> (const <a class="el" href="classepi_1_1UncertainValue.html">UncertainValue</a> &amp;other)</td></tr>
 <tr class="memdesc:a718bd31c21ffe3298ef0b61c1ea40d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an <a class="el" href="classepi_1_1UncertainValue.html" title="The UncertainValue class consists of a scalar value and a Distribution object.">UncertainValue</a> by cloning scalar value and distribution of another <a class="el" href="classepi_1_1UncertainValue.html" title="The UncertainValue class consists of a scalar value and a Distribution object.">UncertainValue</a>.  <a href="classepi_1_1UncertainValue.html#a718bd31c21ffe3298ef0b61c1ea40d0a">More...</a><br /></td></tr>
 <tr class="separator:a718bd31c21ffe3298ef0b61c1ea40d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae92c3f207b83668ca9ed72cfa72bb34f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1UncertainValue.html#ae92c3f207b83668ca9ed72cfa72bb34f">UncertainValue</a> (<a class="el" href="ScalarType_8h.html#acd4f1d492d83a74716a42615e127d641">ScalarType</a> v, const <a class="el" href="classepi_1_1ParameterDistribution.html">ParameterDistribution</a> &amp;dist)</td></tr>
+<tr class="separator:ae92c3f207b83668ca9ed72cfa72bb34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a37fc8cdf3ba38d801454161fc6ec2d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1UncertainValue.html#a0a37fc8cdf3ba38d801454161fc6ec2d">UncertainValue</a> (<a class="el" href="ScalarType_8h.html#acd4f1d492d83a74716a42615e127d641">ScalarType</a> v=0.)</td></tr>
 <tr class="separator:a0a37fc8cdf3ba38d801454161fc6ec2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca611511b2504d6cec52785cb26d443b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1UncertainValue.html#aca611511b2504d6cec52785cb26d443b">UncertainValue</a> (<a class="el" href="classepi_1_1UncertainValue.html">UncertainValue</a> &amp;&amp;other)=default</td></tr>
@@ -139,8 +141,36 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classepi_1_1UncertainValue.html" title="The UncertainValue class consists of a scalar value and a Distribution object.">UncertainValue</a> class consists of a scalar value and a Distribution object. </p>
 <p>The <a class="el" href="classepi_1_1UncertainValue.html" title="The UncertainValue class consists of a scalar value and a Distribution object.">UncertainValue</a> class represents a model parameter that can take a scalar value but that is subjected to a uncertainty. The uncertainty is represented by a distribution object of kind <a class="el" href="classepi_1_1ParameterDistribution.html">ParameterDistribution</a> and the current scalar value can be replaced by drawing a new sample from the the distribution </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae92c3f207b83668ca9ed72cfa72bb34f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae92c3f207b83668ca9ed72cfa72bb34f">&#9670;&nbsp;</a></span>UncertainValue() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">epi::UncertainValue::UncertainValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ScalarType_8h.html#acd4f1d492d83a74716a42615e127d641">ScalarType</a>&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classepi_1_1ParameterDistribution.html">ParameterDistribution</a> &amp;&#160;</td>
+          <td class="paramname"><em>dist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0a37fc8cdf3ba38d801454161fc6ec2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a37fc8cdf3ba38d801454161fc6ec2d">&#9670;&nbsp;</a></span>UncertainValue() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a37fc8cdf3ba38d801454161fc6ec2d">&#9670;&nbsp;</a></span>UncertainValue() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -158,7 +188,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="aca611511b2504d6cec52785cb26d443b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca611511b2504d6cec52785cb26d443b">&#9670;&nbsp;</a></span>UncertainValue() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aca611511b2504d6cec52785cb26d443b">&#9670;&nbsp;</a></span>UncertainValue() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +214,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a718bd31c21ffe3298ef0b61c1ea40d0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a718bd31c21ffe3298ef0b61c1ea40d0a">&#9670;&nbsp;</a></span>UncertainValue() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a718bd31c21ffe3298ef0b61c1ea40d0a">&#9670;&nbsp;</a></span>UncertainValue() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
