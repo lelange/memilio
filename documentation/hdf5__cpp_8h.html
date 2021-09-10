@@ -66,15 +66,85 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">hdf5_cpp.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="compiler__diagnostics_8h_source.html">epidemiology/utils/compiler_diagnostics.h</a>&quot;</code><br />
-<code>#include &lt;H5Cpp.h&gt;</code><br />
+<code>#include &quot;hdf5.h&quot;</code><br />
 </div>
 <p><a href="hdf5__cpp_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1H5DataSet.html">epi::H5DataSet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII for HDF5 data set handles.  <a href="structepi_1_1H5DataSet.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1H5DataSpace.html">epi::H5DataSpace</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII for HDF5 data space handles.  <a href="structepi_1_1H5DataSpace.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1H5File.html">epi::H5File</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII for HDF5 file handles.  <a href="structepi_1_1H5File.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1H5Group.html">epi::H5Group</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII for HDF5 group handles.  <a href="structepi_1_1H5Group.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceepi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html">epi</a></td></tr>
+<tr class="memdesc:namespaceepi"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file describes the framework for IO. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aa8d115d8b4204ac855df6aeef1ebd25d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hdf5__cpp_8h.html#aa8d115d8b4204ac855df6aeef1ebd25d">EPI_H5_CHECK</a>(id, ...)</td></tr>
+<tr class="memdesc:aa8d115d8b4204ac855df6aeef1ebd25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies a return value from the HDF5 C API.  <a href="hdf5__cpp_8h.html#aa8d115d8b4204ac855df6aeef1ebd25d">More...</a><br /></td></tr>
+<tr class="separator:aa8d115d8b4204ac855df6aeef1ebd25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aa8d115d8b4204ac855df6aeef1ebd25d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8d115d8b4204ac855df6aeef1ebd25d">&#9670;&nbsp;</a></span>EPI_H5_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EPI_H5_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">id, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> { \</div>
+<div class="line">        if (<span class="keywordtype">id</span> &lt; 0) { <a class="code" href="namespaceepi.html#aea56b39210ff5804ca2e9f70c4803859">\</a></div>
+<div class="line"><a class="code" href="namespaceepi.html#aea56b39210ff5804ca2e9f70c4803859">            return ::epi::failure</a>(__VA_ARGS__); \</div>
+<div class="line">        } \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+<p>Verifies a return value from the HDF5 C API. </p>
+<p>Uses <a class="el" href="namespaceepi.html#aea56b39210ff5804ca2e9f70c4803859" title="Create an object that is implicitly convertible to an error IOResult&lt;T&gt;.">epi::failure</a> to report an error if the value (the first macro argument) is negative, so it must be used only in functions that return IOResult. All additional macro arguments after the first are passed to an overload of <a class="el" href="namespaceepi.html#aea56b39210ff5804ca2e9f70c4803859" title="Create an object that is implicitly convertible to an error IOResult&lt;T&gt;.">epi::failure</a>. Examples: <a class="el" href="hdf5__cpp_8h.html#aa8d115d8b4204ac855df6aeef1ebd25d" title="Verifies a return value from the HDF5 C API.">EPI_H5_CHECK(id, StatusCode::FileNotFound)</a>; // returns epi::failure(StatusCode::FileNotFound) if error <a class="el" href="hdf5__cpp_8h.html#aa8d115d8b4204ac855df6aeef1ebd25d" title="Verifies a return value from the HDF5 C API.">EPI_H5_CHECK(id, StatusCode::FileNotFound, filename)</a> // returns epi::failure(StatusCode::FileNotFound, filename) if error </p>
+
+</div>
+</div>
 </div><!-- contents -->
+<div class="ttc" id="anamespaceepi_html_aea56b39210ff5804ca2e9f70c4803859"><div class="ttname"><a href="namespaceepi.html#aea56b39210ff5804ca2e9f70c4803859">epi::failure</a></div><div class="ttdeci">auto failure(const IOStatus &amp;s)</div><div class="ttdoc">Create an object that is implicitly convertible to an error IOResult&lt;T&gt;.</div><div class="ttdef"><b>Definition:</b> io.h:476</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

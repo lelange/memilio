@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['failure_250',['failure',['../namespaceepi.html#aea56b39210ff5804ca2e9f70c4803859',1,'epi::failure(const IOStatus &amp;s)'],['../namespaceepi.html#a98bd1217065c2bc450f95d7ed82c6e20',1,'epi::failure(std::error_code c, const std::string &amp;msg=&quot;&quot;)']]],
-  ['file_5fexists_251',['file_exists',['../namespaceepi.html#ab0a4631ea790b11ade8145033400152b',1,'epi']]],
-  ['file_5finfo_252',['file_info',['../namespaceepi.html#a2d578b0613899a721c0eead1276fd4a2',1,'epi']]],
+  ['failure_251',['failure',['../namespaceepi.html#aea56b39210ff5804ca2e9f70c4803859',1,'epi::failure(const IOStatus &amp;s)'],['../namespaceepi.html#a98bd1217065c2bc450f95d7ed82c6e20',1,'epi::failure(std::error_code c, const std::string &amp;msg=&quot;&quot;)']]],
+  ['file_5fexists_252',['file_exists',['../namespaceepi.html#ab0a4631ea790b11ade8145033400152b',1,'epi']]],
   ['filenotfound_253',['FileNotFound',['../namespaceepi.html#a1e26c2aefb564c12224c2dd16b1ba8cea2767828026039e8ba7b38973cbb701f2',1,'epi']]],
   ['fill_5fdf_254',['fill_df',['../namespaceepidemiology_1_1epidata_1_1getRKIData.html#ab2519753fcb2a949c435afbb923de47b',1,'epidemiology::epidata::getRKIData']]],
   ['finalize_255',['finalize',['../classepi_1_1DampingMatrixExpression.html#a24392c5818b224e0da5910bc54ff8969',1,'epi::DampingMatrixExpression::finalize()'],['../classepi_1_1DampingMatrixExpressionGroup.html#a4cd357d8a9975694e6223e5487dcc8d3',1,'epi::DampingMatrixExpressionGroup::finalize()'],['../classepi_1_1Dampings.html#adf022c26c5645ee4467993efc26b2add',1,'epi::Dampings::finalize()']]],

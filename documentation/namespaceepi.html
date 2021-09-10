@@ -197,6 +197,18 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1GraphSimulation.html">GraphSimulation</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">abstract simulation on a graph with alternating node and edge actions  <a href="classepi_1_1GraphSimulation.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1H5DataSet.html">H5DataSet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII for HDF5 data set handles.  <a href="structepi_1_1H5DataSet.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1H5DataSpace.html">H5DataSpace</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII for HDF5 data space handles.  <a href="structepi_1_1H5DataSpace.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1H5File.html">H5File</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII for HDF5 file handles.  <a href="structepi_1_1H5File.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1H5Group.html">H5Group</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII for HDF5 group handles.  <a href="structepi_1_1H5Group.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1HomeToHospitalizedTime.html">HomeToHospitalizedTime</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">the time people are infectious at home before 'simply' hospitalized in the SECIR model in day unit  <a href="structepi_1_1HomeToHospitalizedTime.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -921,8 +933,6 @@ Functions</h2></td></tr>
 <tr class="separator:a98bd1217065c2bc450f95d7ed82c6e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0a4631ea790b11ade8145033400152b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#ab0a4631ea790b11ade8145033400152b">file_exists</a> (std::string const &amp;rel_path, std::string &amp;abs_path)</td></tr>
 <tr class="separator:ab0a4631ea790b11ade8145033400152b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d578b0613899a721c0eead1276fd4a2"><td class="memItemLeft" align="right" valign="top">herr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a2d578b0613899a721c0eead1276fd4a2">file_info</a> (hid_t loc_id, const char *name, const H5L_info_t *linfo, void *opdata)</td></tr>
-<tr class="separator:a2d578b0613899a721c0eead1276fd4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7759228642eb55b650e9be3bc77588a4"><td class="memTemplParams" colspan="2">template&lt;class TS , class FP &gt; </td></tr>
 <tr class="memitem:a7759228642eb55b650e9be3bc77588a4"><td class="memTemplItemLeft" align="right" valign="top">decltype(std::declval&lt; TS &gt;().rend())&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a7759228642eb55b650e9be3bc77588a4">find_value_reverse</a> (TS &amp;&amp;ts, FP t_search, FP abs_tol=0, FP rel_tol=0)</td></tr>
 <tr class="memdesc:a7759228642eb55b650e9be3bc77588a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">find the value in the time series at time t_search starting from the end.  <a href="namespaceepi.html#a7759228642eb55b650e9be3bc77588a4">More...</a><br /></td></tr>
@@ -1270,6 +1280,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ae1ebb94e07f7faaadcb49c06e7cb5f68"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classepi_1_1detail_1_1StatusCodeCategory.html">detail::StatusCodeCategory</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#ae1ebb94e07f7faaadcb49c06e7cb5f68">status_code_category</a> ()</td></tr>
 <tr class="memdesc:ae1ebb94e07f7faaadcb49c06e7cb5f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">singleton StatusCodeCategory instance.  <a href="namespaceepi.html#ae1ebb94e07f7faaadcb49c06e7cb5f68">More...</a><br /></td></tr>
 <tr class="separator:ae1ebb94e07f7faaadcb49c06e7cb5f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb9e70f5748c7a821d499813f11272b6"><td class="memItemLeft" align="right" valign="top">herr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#afb9e70f5748c7a821d499813f11272b6">store_group_name</a> (hid_t loc_id, const char *name, const H5L_info_t *linfo, void *opdata)</td></tr>
+<tr class="separator:afb9e70f5748c7a821d499813f11272b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f628fcc67b59148c234bc6dd75d0e94"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a4f628fcc67b59148c234bc6dd75d0e94">success</a> ()</td></tr>
 <tr class="memdesc:a4f628fcc67b59148c234bc6dd75d0e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an object that is implicitly convertible to a succesful IOResult&lt;void&gt;.  <a href="namespaceepi.html#a4f628fcc67b59148c234bc6dd75d0e94">More...</a><br /></td></tr>
 <tr class="separator:a4f628fcc67b59148c234bc6dd75d0e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3962,46 +3974,6 @@ template&lt;class Model &gt; </div>
           <td></td>
           <td class="paramtype">std::string &amp;&#160;</td>
           <td class="paramname"><em>abs_path</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2d578b0613899a721c0eead1276fd4a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d578b0613899a721c0eead1276fd4a2">&#9670;&nbsp;</a></span>file_info()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">herr_t epi::file_info </td>
-          <td>(</td>
-          <td class="paramtype">hid_t&#160;</td>
-          <td class="paramname"><em>loc_id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const H5L_info_t *&#160;</td>
-          <td class="paramname"><em>linfo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>opdata</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -8337,6 +8309,46 @@ template&lt;class LeftExpr , class RightExpr &gt; </div>
 </div><div class="memdoc">
 
 <p>singleton StatusCodeCategory instance. </p>
+
+</div>
+</div>
+<a id="afb9e70f5748c7a821d499813f11272b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb9e70f5748c7a821d499813f11272b6">&#9670;&nbsp;</a></span>store_group_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">herr_t epi::store_group_name </td>
+          <td>(</td>
+          <td class="paramtype">hid_t&#160;</td>
+          <td class="paramname"><em>loc_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const H5L_info_t *&#160;</td>
+          <td class="paramname"><em>linfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>opdata</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
