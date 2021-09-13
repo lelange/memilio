@@ -87,6 +87,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1AntigenTest.html">epi::AntigenTest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1BasicShoppingRate.html">epi::BasicShoppingRate</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1CarrierToInfected.html">epi::CarrierToInfected</a></td></tr>
@@ -124,6 +126,10 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1SusceptibleToExposedByInfected.html">epi::SusceptibleToExposedByInfected</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1TestParameters.html">epi::TestParameters</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1TestWhileInfected.html">epi::TestWhileInfected</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structepi_1_1WorkRatio.html">epi::WorkRatio</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -138,9 +144,12 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a6b1a9c4fa2e196c5559ef49ec1a5853c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a6b1a9c4fa2e196c5559ef49ec1a5853c">epi::AbmMigrationParameters</a> = ParameterSet&lt; LockdownDate, SocialEventRate, BasicShoppingRate, WorkRatio, SchoolRatio &gt;</td></tr>
 <tr class="memdesc:a6b1a9c4fa2e196c5559ef49ec1a5853c"><td class="mdescLeft">&#160;</td><td class="mdescRight">parameters that control the migration between locations.  <a href="namespaceepi.html#a6b1a9c4fa2e196c5559ef49ec1a5853c">More...</a><br /></td></tr>
 <tr class="separator:a6b1a9c4fa2e196c5559ef49ec1a5853c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0d0e3dfee3b53f13540bc1bc9dbe590"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#aa0d0e3dfee3b53f13540bc1bc9dbe590">epi::GlobalInfectionParameters</a> = ParameterSet&lt; IncubationPeriod, SusceptibleToExposedByCarrier, SusceptibleToExposedByInfected, CarrierToInfected, CarrierToRecovered, InfectedToRecovered, InfectedToSevere, SevereToCritical, SevereToRecovered, CriticalToDead, CriticalToRecovered, RecoveredToSusceptible, DetectInfection &gt;</td></tr>
-<tr class="memdesc:aa0d0e3dfee3b53f13540bc1bc9dbe590"><td class="mdescLeft">&#160;</td><td class="mdescRight">parameters of the infection that are the same everywhere within the world.  <a href="namespaceepi.html#aa0d0e3dfee3b53f13540bc1bc9dbe590">More...</a><br /></td></tr>
-<tr class="separator:aa0d0e3dfee3b53f13540bc1bc9dbe590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a747f12c191bf333d8ec532ee7d0be1fc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a747f12c191bf333d8ec532ee7d0be1fc">epi::GlobalInfectionParameters</a> = ParameterSet&lt; IncubationPeriod, SusceptibleToExposedByCarrier, SusceptibleToExposedByInfected, CarrierToInfected, CarrierToRecovered, InfectedToRecovered, InfectedToSevere, SevereToCritical, SevereToRecovered, CriticalToDead, CriticalToRecovered, RecoveredToSusceptible, DetectInfection, TestWhileInfected &gt;</td></tr>
+<tr class="memdesc:a747f12c191bf333d8ec532ee7d0be1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">parameters of the infection that are the same everywhere within the world.  <a href="namespaceepi.html#a747f12c191bf333d8ec532ee7d0be1fc">More...</a><br /></td></tr>
+<tr class="separator:a747f12c191bf333d8ec532ee7d0be1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389cecfec75404a7cb9a3fb98e831f35"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a389cecfec75404a7cb9a3fb98e831f35">epi::GlobalTestingParameters</a> = ParameterSet&lt; AntigenTest &gt;</td></tr>
+<tr class="memdesc:a389cecfec75404a7cb9a3fb98e831f35"><td class="mdescLeft">&#160;</td><td class="mdescRight">parameters of the testing that are the same everywhere in the world.  <a href="namespaceepi.html#a389cecfec75404a7cb9a3fb98e831f35">More...</a><br /></td></tr>
+<tr class="separator:a389cecfec75404a7cb9a3fb98e831f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f48f3e7d3f0fb94f9957174efa2903e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceepi.html#a0f48f3e7d3f0fb94f9957174efa2903e">epi::LocalInfectionParameters</a> = ParameterSet&lt; EffectiveContacts &gt;</td></tr>
 <tr class="memdesc:a0f48f3e7d3f0fb94f9957174efa2903e"><td class="mdescLeft">&#160;</td><td class="mdescRight">parameters of the infection that depend on the location.  <a href="namespaceepi.html#a0f48f3e7d3f0fb94f9957174efa2903e">More...</a><br /></td></tr>
 <tr class="separator:a0f48f3e7d3f0fb94f9957174efa2903e"><td class="memSeparator" colspan="2">&#160;</td></tr>

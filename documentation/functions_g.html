@@ -122,7 +122,8 @@ $(function() {
 , <a class="el" href="classepi_1_1UncertainContactMatrix.html#a06a2198f95dff21c58f38da8e523f810">epi::UncertainContactMatrix</a>
 </li>
 <li>get_default()
-: <a class="el" href="structepi_1_1AsymptoticCasesPerInfectious.html#af4243e4c1762f15e8a224f36d8cec761">epi::AsymptoticCasesPerInfectious</a>
+: <a class="el" href="structepi_1_1AntigenTest.html#a9d18ed51bdb973484d46096925bd1c09">epi::AntigenTest</a>
+, <a class="el" href="structepi_1_1AsymptoticCasesPerInfectious.html#af4243e4c1762f15e8a224f36d8cec761">epi::AsymptoticCasesPerInfectious</a>
 , <a class="el" href="structepi_1_1BasicShoppingRate.html#a2c6e12ee61d7f6f34f419a43e5f34c99">epi::BasicShoppingRate</a>
 , <a class="el" href="structepi_1_1CarrierToInfected.html#acbdfc0eaa9ddfa0500d52ea4b7895118">epi::CarrierToInfected</a>
 , <a class="el" href="structepi_1_1CarrierToRecovered.html#a555c9965345289af6be615e0f701494e">epi::CarrierToRecovered</a>
@@ -167,6 +168,7 @@ $(function() {
 , <a class="el" href="structepi_1_1SusceptibleToExposedByCarrier.html#ad56d3de53297c7fc7e093ddb0d5e6673">epi::SusceptibleToExposedByCarrier</a>
 , <a class="el" href="structepi_1_1SusceptibleToExposedByInfected.html#a0da73891814b23524ee350215c1b4cd7">epi::SusceptibleToExposedByInfected</a>
 , <a class="el" href="structepi_1_1TestAndTraceCapacity.html#aa50aab325ed2be9b8897e75af15dae84">epi::TestAndTraceCapacity</a>
+, <a class="el" href="structepi_1_1TestWhileInfected.html#a712584dada5b1b804f42eee0beb4bb44">epi::TestWhileInfected</a>
 , <a class="el" href="structepi_1_1TransmissionRisk.html#a6417d3ecb6bd551abfb8ab79b03d05d6">epi::TransmissionRisk</a>
 , <a class="el" href="structepi_1_1WorkRatio.html#a3a998be10af00548eadbf4b8c32c5795">epi::WorkRatio</a>
 </li>
@@ -194,6 +196,9 @@ $(function() {
 </li>
 <li>get_global_infection_parameters()
 : <a class="el" href="classepi_1_1World.html#a268e14a6511d0deddf31df3d35856670">epi::World</a>
+</li>
+<li>get_global_testing_parameters()
+: <a class="el" href="classepi_1_1World.html#a639ee00d9d5666c5a01faf8ba1627f07">epi::World</a>
 </li>
 <li>get_graph()
 : <a class="el" href="classepi_1_1GraphSimulation.html#abae29333d66a5aeddafd7da180902f0d">epi::GraphSimulation&lt; Graph &gt;</a>
@@ -230,6 +235,7 @@ $(function() {
 </li>
 <li>get_interval()
 : <a class="el" href="classepi_1_1DynamicNPIs.html#a1bc8d1cf271b9755b67abc0790e614b6">epi::DynamicNPIs</a>
+, <a class="el" href="classepi_1_1TestingScheme.html#a463e129cff43e23320fde480ecbb665b">epi::TestingScheme</a>
 </li>
 <li>get_last_state()
 : <a class="el" href="classepi_1_1SimulationNode.html#af7602fdebc51b36b64fa6f8a9756979d">epi::SimulationNode&lt; Sim &gt;</a>
@@ -259,7 +265,7 @@ $(function() {
 <li>get_matrix_at()
 : <a class="el" href="classepi_1_1DampingMatrixExpression.html#a6444689d4565c8775e2689d7dd7da2f2">epi::DampingMatrixExpression&lt; D &gt;</a>
 , <a class="el" href="classepi_1_1DampingMatrixExpressionGroup.html#a2f684a5b128d68f16faeca09fa214563">epi::DampingMatrixExpressionGroup&lt; E &gt;</a>
-, <a class="el" href="classepi_1_1Dampings.html#a3cd4876609f851e634b5ce56b08731c1">epi::Dampings&lt; D &gt;</a>
+, <a class="el" href="classepi_1_1Dampings.html#af0693eb9a33258fd81445aae0f5bca94">epi::Dampings&lt; D &gt;</a>
 </li>
 <li>get_matrix_indices()
 : <a class="el" href="classepi_1_1DampingSampling.html#a1e0da32e1c9892e1f874aca8e348ebd4">epi::DampingSampling</a>
@@ -274,7 +280,7 @@ $(function() {
 : <a class="el" href="classepi_1_1World.html#ab366d924eb4ca4f5f95757a7db063d90">epi::World</a>
 </li>
 <li>get_minimum()
-: <a class="el" href="classepi_1_1DampingMatrixExpression.html#ac9d6e0b14c1726cabf1e330777184270">epi::DampingMatrixExpression&lt; D &gt;</a>
+: <a class="el" href="classepi_1_1DampingMatrixExpression.html#ad7086a49d9f9674b3ac74168d8a0f44a">epi::DampingMatrixExpression&lt; D &gt;</a>
 </li>
 <li>get_model()
 : <a class="el" href="classepi_1_1ParameterStudy.html#a3adee54623bb242bbaf0e50911c35526">epi::ParameterStudy&lt; S &gt;</a>
@@ -315,6 +321,9 @@ $(function() {
 <li>get_predefined_samples()
 : <a class="el" href="classepi_1_1ParameterDistribution.html#aca26a340fd3f7d88f040b84cf0f308cd">epi::ParameterDistribution</a>
 </li>
+<li>get_probability()
+: <a class="el" href="classepi_1_1TestingScheme.html#a79ba7d46a0aa7fef1d51a518ecf5a33b">epi::TestingScheme</a>
+</li>
 <li>get_ptr()
 : <a class="el" href="classepi_1_1Span.html#a2cd35ed7a05460cb64091684de8f944b">epi::Span&lt; T &gt;</a>
 </li>
@@ -331,7 +340,7 @@ $(function() {
 : <a class="el" href="classepi_1_1AbmSimulation.html#adfd90b5fbd27e516441c36e4cb2bed38">epi::AbmSimulation</a>
 , <a class="el" href="classepi_1_1OdeIntegrator.html#a37b32dd029a75628be7c9fea767660c6">epi::OdeIntegrator</a>
 , <a class="el" href="classepi_1_1Simulation.html#ac4e0f33843f93a3aa8dd64336e49095f">epi::Simulation&lt; M &gt;</a>
-, <a class="el" href="classepi_1_1SimulationNode.html#a5549755558f51e411348ace482e866fd">epi::SimulationNode&lt; Sim &gt;</a>
+, <a class="el" href="classepi_1_1SimulationNode.html#ab73ce9d88badc904754f1abb5aca519a">epi::SimulationNode&lt; Sim &gt;</a>
 </li>
 <li>get_reverse_times()
 : <a class="el" href="classepi_1_1TimeSeries.html#a7f9e8f0ba6fb8b04cba3a610b6fd6757">epi::TimeSeries&lt; FP &gt;</a>
@@ -340,13 +349,13 @@ $(function() {
 : <a class="el" href="classepi_1_1ParameterDistribution.html#a9201e3bffc6f0506cb417dce99dae073">epi::ParameterDistribution</a>
 </li>
 <li>get_school_holiday_damping()
-: <a class="el" href="classepi_1_1UncertainContactMatrix.html#ab1aee8c065d27b4578e70d52cd461ff2">epi::UncertainContactMatrix</a>
+: <a class="el" href="classepi_1_1UncertainContactMatrix.html#acd9c50e2bd7503ff8282e7e4726571a0">epi::UncertainContactMatrix</a>
 </li>
 <li>get_school_holidays()
 : <a class="el" href="classepi_1_1UncertainContactMatrix.html#a2997931db42e40db7d2a4f8b6259a318">epi::UncertainContactMatrix</a>
 </li>
 <li>get_secir_model_graph()
-: <a class="el" href="classepi_1_1ParameterStudy.html#a6ad45e956b7bc5e0f5985ff14c7dfbe4">epi::ParameterStudy&lt; S &gt;</a>
+: <a class="el" href="classepi_1_1ParameterStudy.html#a4f3a2f28d462feb96a625021400423c0">epi::ParameterStudy&lt; S &gt;</a>
 </li>
 <li>get_secir_params()
 : <a class="el" href="classepi_1_1ImplicitEulerIntegratorCore.html#a4ad865e8d0d991bf175eb7296bde48a4">epi::ImplicitEulerIntegratorCore</a>
@@ -387,16 +396,25 @@ $(function() {
 : <a class="el" href="classepi_1_1ParameterStudy.html#aacb5e76194a22b314a09c8136ff13946">epi::ParameterStudy&lt; S &gt;</a>
 , <a class="el" href="classepi_1_1SimulationNode.html#a3105f3510e1dc1d400a065203a1ba447">epi::SimulationNode&lt; Sim &gt;</a>
 </li>
+<li>get_tested()
+: <a class="el" href="classepi_1_1Person.html#a8a9f8a555dc86a10488f33ec46d170e9">epi::Person</a>
+</li>
+<li>get_testing_scheme()
+: <a class="el" href="classepi_1_1Location.html#a62b9a5703f9e321661bccae9bd34484e">epi::Location</a>
+</li>
 <li>get_thresholds()
 : <a class="el" href="classepi_1_1DynamicNPIs.html#a41a07257cbb7554c21c489b20033da92">epi::DynamicNPIs</a>
 </li>
 <li>get_time()
-: <a class="el" href="classepi_1_1Damping.html#a98be89d696e0505b6b060b1e68613d92">epi::Damping&lt; S &gt;</a>
+: <a class="el" href="classepi_1_1Damping.html#a360ab59c148f0162cb070fba4e30feb1">epi::Damping&lt; S &gt;</a>
 , <a class="el" href="classepi_1_1DampingSampling.html#a88d9e981b0e65de876eb0a1fdfa440dc">epi::DampingSampling</a>
-, <a class="el" href="classepi_1_1TimeSeries.html#a5976bd6a6f017309ba760391a68e0434">epi::TimeSeries&lt; FP &gt;</a>
+, <a class="el" href="classepi_1_1TimeSeries.html#a0b94e9c623353a01b7645219d357a89d">epi::TimeSeries&lt; FP &gt;</a>
 </li>
 <li>get_time_at_location()
 : <a class="el" href="classepi_1_1Person.html#abd1f5e06f9f86e431a14c09cafd14c34">epi::Person</a>
+</li>
+<li>get_time_since_negative_test()
+: <a class="el" href="classepi_1_1Person.html#af80aba0079dc219119c013a1f5cd9934">epi::Person</a>
 </li>
 <li>get_times()
 : <a class="el" href="classepi_1_1TimeSeries.html#aacd15a057dcd6b24c5db4ff61149fb0c">epi::TimeSeries&lt; FP &gt;</a>
@@ -411,7 +429,7 @@ $(function() {
 : <a class="el" href="classepi_1_1SecirSimulationResult.html#afe8f055d70048e19971aa81b59447b51">epi::SecirSimulationResult</a>
 </li>
 <li>get_type()
-: <a class="el" href="classepi_1_1Damping.html#acaa20023093c36037d5d85036068bef3">epi::Damping&lt; S &gt;</a>
+: <a class="el" href="classepi_1_1Damping.html#ae7cb6062e799fa4d97a297f334711827">epi::Damping&lt; S &gt;</a>
 , <a class="el" href="classepi_1_1DampingSampling.html#ada051443fd71085b0f6f48b5e7f931ef">epi::DampingSampling</a>
 , <a class="el" href="classepi_1_1Location.html#aaeb61eb5164c5369e87fb2c886767903">epi::Location</a>
 </li>
@@ -419,7 +437,7 @@ $(function() {
 : <a class="el" href="classepi_1_1ParameterDistribution.html#af5059906b659d18ec071e9db2ce36922">epi::ParameterDistribution</a>
 </li>
 <li>get_valid_block()
-: <a class="el" href="classepi_1_1TimeSeries.html#aedc5d931196dc17535d7cd2dee220597">epi::TimeSeries&lt; FP &gt;</a>
+: <a class="el" href="classepi_1_1TimeSeries.html#aee496a8e3624d84650d3d27747297855">epi::TimeSeries&lt; FP &gt;</a>
 </li>
 <li>get_value()
 : <a class="el" href="classepi_1_1DampingSampling.html#a4b1b807d05804725c982af6fefabd34b">epi::DampingSampling</a>
@@ -432,7 +450,7 @@ $(function() {
 : <a class="el" href="classepi_1_1Person.html#a7f61682464e6993ae07fe6427bfa6996">epi::Person</a>
 </li>
 <li>GraphSimulation()
-: <a class="el" href="classepi_1_1GraphSimulation.html#a758b162f66f6c24e4cc161fc9c756ece">epi::GraphSimulation&lt; Graph &gt;</a>
+: <a class="el" href="classepi_1_1GraphSimulation.html#a99ded22aa4a50c7c58745c6708cba334">epi::GraphSimulation&lt; Graph &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->

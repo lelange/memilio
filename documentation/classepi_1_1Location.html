@@ -86,7 +86,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d4ad018edc21ccb9c7185a155357da4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#a8d4ad018edc21ccb9c7185a155357da4">add_person</a> (const <a class="el" href="classepi_1_1Person.html">Person</a> &amp;person)</td></tr>
 <tr class="memdesc:a8d4ad018edc21ccb9c7185a155357da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a person to the population at this location.  <a href="classepi_1_1Location.html#a8d4ad018edc21ccb9c7185a155357da4">More...</a><br /></td></tr>
 <tr class="separator:a8d4ad018edc21ccb9c7185a155357da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a198234039bc4cf2212ccbd3a6230f169"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#a198234039bc4cf2212ccbd3a6230f169">begin_step</a> (<a class="el" href="classepi_1_1TimeSpan.html">TimeSpan</a> dt, const <a class="el" href="namespaceepi.html#aa0d0e3dfee3b53f13540bc1bc9dbe590">GlobalInfectionParameters</a> &amp;global_params)</td></tr>
+<tr class="memitem:a198234039bc4cf2212ccbd3a6230f169"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#a198234039bc4cf2212ccbd3a6230f169">begin_step</a> (<a class="el" href="classepi_1_1TimeSpan.html">TimeSpan</a> dt, const <a class="el" href="namespaceepi.html#a747f12c191bf333d8ec532ee7d0be1fc">GlobalInfectionParameters</a> &amp;global_params)</td></tr>
 <tr class="memdesc:a198234039bc4cf2212ccbd3a6230f169"><td class="mdescLeft">&#160;</td><td class="mdescRight">prepare the location for the next simulation step.  <a href="classepi_1_1Location.html#a198234039bc4cf2212ccbd3a6230f169">More...</a><br /></td></tr>
 <tr class="separator:a198234039bc4cf2212ccbd3a6230f169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a852d54e4cb2153fe28aa53fb71c28a1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#a852d54e4cb2153fe28aa53fb71c28a1f">changed_state</a> (const <a class="el" href="classepi_1_1Person.html">Person</a> &amp;person, <a class="el" href="namespaceepi.html#aa085820f5ddc6774e7591ec0b5305092">InfectionState</a> old_state)</td></tr>
@@ -105,10 +105,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a54bcf843068689aa43ced309bfa89b92"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; const Eigen::VectorXi &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#a54bcf843068689aa43ced309bfa89b92">get_subpopulations</a> () const</td></tr>
 <tr class="memdesc:a54bcf843068689aa43ced309bfa89b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of persons at this location for all infection states.  <a href="classepi_1_1Location.html#a54bcf843068689aa43ced309bfa89b92">More...</a><br /></td></tr>
 <tr class="separator:a54bcf843068689aa43ced309bfa89b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b9a5703f9e321661bccae9bd34484e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classepi_1_1TestingScheme.html">TestingScheme</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#a62b9a5703f9e321661bccae9bd34484e">get_testing_scheme</a> () const</td></tr>
+<tr class="separator:a62b9a5703f9e321661bccae9bd34484e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeb61eb5164c5369e87fb2c886767903"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#adabd8b3f600e98668b14d2d891526943">LocationType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#aaeb61eb5164c5369e87fb2c886767903">get_type</a> () const</td></tr>
 <tr class="memdesc:aaeb61eb5164c5369e87fb2c886767903"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the type of this location.  <a href="classepi_1_1Location.html#aaeb61eb5164c5369e87fb2c886767903">More...</a><br /></td></tr>
 <tr class="separator:aaeb61eb5164c5369e87fb2c886767903"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd1de9961a4622c6de0bf87c2cf5f614"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#aa085820f5ddc6774e7591ec0b5305092">InfectionState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#acd1de9961a4622c6de0bf87c2cf5f614">interact</a> (const <a class="el" href="classepi_1_1Person.html">Person</a> &amp;person, <a class="el" href="classepi_1_1TimeSpan.html">TimeSpan</a> dt, const <a class="el" href="namespaceepi.html#aa0d0e3dfee3b53f13540bc1bc9dbe590">GlobalInfectionParameters</a> &amp;global_params) const</td></tr>
+<tr class="memitem:acd1de9961a4622c6de0bf87c2cf5f614"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#aa085820f5ddc6774e7591ec0b5305092">InfectionState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#acd1de9961a4622c6de0bf87c2cf5f614">interact</a> (const <a class="el" href="classepi_1_1Person.html">Person</a> &amp;person, <a class="el" href="classepi_1_1TimeSpan.html">TimeSpan</a> dt, const <a class="el" href="namespaceepi.html#a747f12c191bf333d8ec532ee7d0be1fc">GlobalInfectionParameters</a> &amp;global_params) const</td></tr>
 <tr class="memdesc:acd1de9961a4622c6de0bf87c2cf5f614"><td class="mdescLeft">&#160;</td><td class="mdescRight">a person interacts with the population at this location, may change infection state.  <a href="classepi_1_1Location.html#acd1de9961a4622c6de0bf87c2cf5f614">More...</a><br /></td></tr>
 <tr class="separator:acd1de9961a4622c6de0bf87c2cf5f614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af01738654c747e3134082e89cf75b0bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#af01738654c747e3134082e89cf75b0bb">Location</a> (<a class="el" href="namespaceepi.html#adabd8b3f600e98668b14d2d891526943">LocationType</a> type, uint32_t index)</td></tr>
@@ -117,6 +119,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abd6ce3a8d85fafafbcf1ef24e571b1af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#abd6ce3a8d85fafafbcf1ef24e571b1af">remove_person</a> (const <a class="el" href="classepi_1_1Person.html">Person</a> &amp;person)</td></tr>
 <tr class="memdesc:abd6ce3a8d85fafafbcf1ef24e571b1af"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a person from the population of this location.  <a href="classepi_1_1Location.html#abd6ce3a8d85fafafbcf1ef24e571b1af">More...</a><br /></td></tr>
 <tr class="separator:abd6ce3a8d85fafafbcf1ef24e571b1af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af69a327a9a29fd706b197693d3fe9610"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#af69a327a9a29fd706b197693d3fe9610">set_testing_scheme</a> (<a class="el" href="classepi_1_1TimeSpan.html">TimeSpan</a> interval, double probability)</td></tr>
+<tr class="separator:af69a327a9a29fd706b197693d3fe9610"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -135,6 +139,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aaf8b271cf7e2e1657e84e9dbfa863279"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a07eff3e29bda8b87bb23d22ab346e8"><td class="memItemLeft" align="right" valign="top">std::array&lt; int, size_t(<a class="el" href="namespaceepi.html#aa085820f5ddc6774e7591ec0b5305092ae93f994f01c537c4e2f7d8528c3eb5e9">InfectionState::Count</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#a6a07eff3e29bda8b87bb23d22ab346e8">m_subpopulations</a></td></tr>
 <tr class="separator:a6a07eff3e29bda8b87bb23d22ab346e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e177244ed089bba066fce345481473a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classepi_1_1TestingScheme.html">TestingScheme</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#a0e177244ed089bba066fce345481473a">m_testing_scheme</a></td></tr>
+<tr class="separator:a0e177244ed089bba066fce345481473a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5694d28dd83b0a92df8799081d9c0ce7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceepi.html#adabd8b3f600e98668b14d2d891526943">LocationType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classepi_1_1Location.html#a5694d28dd83b0a92df8799081d9c0ce7">m_type</a></td></tr>
 <tr class="separator:a5694d28dd83b0a92df8799081d9c0ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -220,7 +226,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespaceepi.html#aa0d0e3dfee3b53f13540bc1bc9dbe590">GlobalInfectionParameters</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceepi.html#a747f12c191bf333d8ec532ee7d0be1fc">GlobalInfectionParameters</a> &amp;&#160;</td>
           <td class="paramname"><em>global_params</em>&#160;</td>
         </tr>
         <tr>
@@ -410,6 +416,23 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a62b9a5703f9e321661bccae9bd34484e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62b9a5703f9e321661bccae9bd34484e">&#9670;&nbsp;</a></span>get_testing_scheme()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classepi_1_1TestingScheme.html">TestingScheme</a>&amp; epi::Location::get_testing_scheme </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aaeb61eb5164c5369e87fb2c886767903"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaeb61eb5164c5369e87fb2c886767903">&#9670;&nbsp;</a></span>get_type()</h2>
 
@@ -450,7 +473,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespaceepi.html#aa0d0e3dfee3b53f13540bc1bc9dbe590">GlobalInfectionParameters</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceepi.html#a747f12c191bf333d8ec532ee7d0be1fc">GlobalInfectionParameters</a> &amp;&#160;</td>
           <td class="paramname"><em>global_params</em>&#160;</td>
         </tr>
         <tr>
@@ -497,6 +520,34 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="af69a327a9a29fd706b197693d3fe9610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af69a327a9a29fd706b197693d3fe9610">&#9670;&nbsp;</a></span>set_testing_scheme()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void epi::Location::set_testing_scheme </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classepi_1_1TimeSpan.html">TimeSpan</a>&#160;</td>
+          <td class="paramname"><em>interval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>probability</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -600,6 +651,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::array&lt;int, size_t(<a class="el" href="namespaceepi.html#aa085820f5ddc6774e7591ec0b5305092ae93f994f01c537c4e2f7d8528c3eb5e9">InfectionState::Count</a>)&gt; epi::Location::m_subpopulations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e177244ed089bba066fce345481473a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e177244ed089bba066fce345481473a">&#9670;&nbsp;</a></span>m_testing_scheme</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classepi_1_1TestingScheme.html">TestingScheme</a> epi::Location::m_testing_scheme</td>
         </tr>
       </table>
   </td>
