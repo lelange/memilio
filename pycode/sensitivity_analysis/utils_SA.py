@@ -1,5 +1,5 @@
 from epidemiology.secir import (UncertainContactMatrix, ContactMatrix, Damping, SecirModel,
-                                simulate, AgeGroup, Index_InfectionState, SecirSimulation)
+                                simulate, AgeGroup, Index_InfectionState, SecirSimulation, interpolate_simulation_result)
 from epidemiology.secir import InfectionState as State
 import numpy as np
 import pandas as pd
@@ -12,6 +12,7 @@ def test_SA(hello):
 
 def simulate_model(params):
     '''
+    TODO: Explain parameters
     # num_groups
     # num_compartments
     # start_date = (date(start_year, start_month, start_day) - date(start_year, 1, 1)).days
@@ -31,9 +32,9 @@ def simulate_model(params):
     # Set parameters
     for i in range(params["num_groups"]):
         # Compartment transition duration
-        model.parameters.IncubationTime[AgeGroup(i)] = params["incubation_time"]
+        model.parameters.IncubationTime[AgeGroup(i)] = 5.2 #params["incubation_time"]
         model.parameters.InfectiousTimeMild[AgeGroup(i)] = params["infectious_mild_time"]
-        model.parameters.SerialInterval[AgeGroup(i)] = params["serial_interval"]
+        model.parameters.SerialInterval[AgeGroup(i)] = 4.2 #params["serial_interval"]
         model.parameters.HospitalizedToHomeTime[AgeGroup(i)] = params["hospitalized_to_home_time"]
         model.parameters.HomeToHospitalizedTime[AgeGroup(i)] = params["home_to_hospitalized_time"]
         model.parameters.HospitalizedToICUTime[AgeGroup(i)] = params["hospitalized_to_icu_time"]
@@ -41,24 +42,24 @@ def simulate_model(params):
         model.parameters.ICUToDeathTime[AgeGroup(i)] = params["icu_to_death_time"]
 
         # Initial number of peaople in each compartment
-        model.populations[AgeGroup(i), Index_InfectionState(State.Exposed)] = 100
-        model.populations[AgeGroup(i), Index_InfectionState(State.Carrier)] = 50
-        model.populations[AgeGroup(i), Index_InfectionState(State.Infected)] = 50
-        model.populations[AgeGroup(i), Index_InfectionState(State.Hospitalized)] = 20
-        model.populations[AgeGroup(i), Index_InfectionState(State.ICU)] = 10
-        model.populations[AgeGroup(i), Index_InfectionState(State.Recovered)] = 10
-        model.populations[AgeGroup(i), Index_InfectionState(State.Dead)] = 0
+        model.populations[AgeGroup(i), Index_InfectionState(State.Exposed)] = params["init_exposed"]
+        model.populations[AgeGroup(i), Index_InfectionState(State.Carrier)] = params["init_carrier"]
+        model.populations[AgeGroup(i), Index_InfectionState(State.Infected)] = params["init_infected"]
+        model.populations[AgeGroup(i), Index_InfectionState(State.Hospitalized)] = params["init_hospitalized"]
+        model.populations[AgeGroup(i), Index_InfectionState(State.ICU)] = params["init_ICU"]
+        model.populations[AgeGroup(i), Index_InfectionState(State.Recovered)] = params["init_recovered"]
+        model.populations[AgeGroup(i), Index_InfectionState(State.Dead)] = params["init_dead"]
         model.populations.set_difference_from_total((AgeGroup(i), Index_InfectionState(State.Susceptible)), params["populations"][i])
 
          # Compartment transition propabilities
-        model.parameters.RelativeCarrierInfectability[AgeGroup(i)] = 0.67  
-        model.parameters.InfectionProbabilityFromContact[AgeGroup(i)] = 1.0
-        model.parameters.AsymptoticCasesPerInfectious[AgeGroup(i)] = 0.09  # 0.01-0.16
-        model.parameters.RiskOfInfectionFromSympomatic[AgeGroup(i)] = 0.25  # 0.05-0.5
-        model.parameters.HospitalizedCasesPerInfectious[AgeGroup(i)] = 0.2  # 0.1-0.35
-        model.parameters.ICUCasesPerHospitalized[AgeGroup(i)] = 0.25  # 0.15-0.4
-        model.parameters.DeathsPerHospitalized[AgeGroup(i)] = 0.3  # 0.15-0.77
-        model.parameters.MaxRiskOfInfectionFromSympomatic[AgeGroup(i)] = 0.5 # twice the value of RiskOfInfectionFromSymptomatic
+        model.parameters.RelativeCarrierInfectability[AgeGroup(i)] = params["relative_carrier_infectability"]  
+        model.parameters.InfectionProbabilityFromContact[AgeGroup(i)] = params["infection_probability_from_contact"]
+        model.parameters.AsymptoticCasesPerInfectious[AgeGroup(i)] = params["asymptotic_cases_per_infectious"]  # 0.01-0.16
+        model.parameters.RiskOfInfectionFromSympomatic[AgeGroup(i)] = params["risk_of_infection_from_symptomatic"]  # 0.05-0.5
+        model.parameters.HospitalizedCasesPerInfectious[AgeGroup(i)] = params["hospitalized_cases_per_infectious"]  # 0.1-0.35
+        model.parameters.ICUCasesPerHospitalized[AgeGroup(i)] = params["ICU_cases_per_hospitalized"]  # 0.15-0.4
+        model.parameters.DeathsPerHospitalized[AgeGroup(i)] = params["deaths_per_hospitalized"]  # 0.15-0.77
+        model.parameters.MaxRiskOfInfectionFromSympomatic[AgeGroup(i)] = params["max_risk_of_infection_from_symptomatic"] # twice the value of RiskOfInfectionFromSymptomatic
 
     model.parameters.StartDay = params["start_day"]
 
@@ -74,6 +75,8 @@ def simulate_model(params):
 
     # Run Simulation
     result = simulate(0, params["days"], params["dt"], model)
+
+    result = interpolate_simulation_result(result)
     
     # return maximal number of infected persons during the given time interval
     num_time_points = result.get_num_time_points()
@@ -86,8 +89,19 @@ def simulate_model(params):
     for i in range(params["num_groups"]):
         data += group_data[:, i * params["num_compartments"] : (i + 1) * params["num_compartments"]]
     
-    infections = data[:, params["output_index"]]
-    return np.max(infections)
+    output = data[:, params["output_index"]]
+
+    if params["output_operation"] == "max":
+        output = np.max(output, axis = 0)
+    elif params["output_operation"] == "sum":
+        output = np.sum(output, axis = 0)
+    elif params["output_operation"] == "mean":
+        output = np.mean(output, axis = 0)
+
+
+
+    #TODO: calculate max, integral etc. now or only return whole dataset?
+    return output
     
 
 
