@@ -9,10 +9,12 @@ on:
     tags:
       - version-*
   pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
   workflow_dispatch:
 
 jobs:
   build-cpp-gcc_clang:
+    if: github.event.pull_request.draft == false
     strategy:
       matrix:
         compiler: ["gcc", "clang"]
@@ -24,7 +26,6 @@ jobs:
           - version: "min"
             os: "ubuntu-18.04"
     runs-on: ${{ matrix.os }}
-    continue-on-error: ${{ matrix.compiler == 'clang' && matrix.version == 'latest' }} # our jsoncpp version does not build on clang above version 9
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/linux-build
@@ -36,7 +37,20 @@ jobs:
           sanitize-addr: ${{ (matrix.compiler == 'gcc' && matrix.config == 'Debug' && matrix.version == 'latest') && 'ON' || 'OFF' }}
           sanitize-ub: ${{ (matrix.compiler == 'gcc' && matrix.config == 'Debug' && matrix.version == 'latest') && 'ON' || 'OFF' }}
 
+  build-cpp-gcc-no-optional-deps:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/linux-build
+        with:
+          compiler: gcc
+          version: latest
+          config: Release
+          optional-dependencies: OFF
+
   build-cpp-msvc:
+    if: github.event.pull_request.draft == false
     strategy:
       matrix:
         config: ["Debug", "Release"]
@@ -54,7 +68,19 @@ jobs:
           config: ${{ matrix.config }}
           version: ${{ matrix.version }}
 
+  build-cpp-msvc-no-optional-deps:
+    if: github.event.pull_request.draft == false
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/windows-build
+        with: 
+          config: Release
+          version: latest
+          optional-dependencies: OFF
+
   test-cpp-gcc_clang:
+    if: github.event.pull_request.draft == false
     needs: build-cpp-gcc_clang
     strategy:
       matrix:
@@ -67,15 +93,25 @@ jobs:
           - version: "min"
             os: "ubuntu-18.04"
     runs-on: ${{ matrix.os }}
-    continue-on-error: ${{ matrix.compiler == 'clang' && matrix.version == 'latest' }}
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/linux-test
         with: 
-          build-artifact: build-cpp-linux-${{ matrix.compiler }}-${{ matrix.version }}-${{ matrix.config }}
+          build-artifact: build-cpp-linux-${{ matrix.compiler }}-${{ matrix.version }}-${{ matrix.config }}-full
           coverage: ${{ (matrix.compiler == 'gcc' && matrix.version == 'latest' && matrix.config == 'Debug') && 'ON' || 'OFF' }}
+  
+  test-linux-no-optional-deps:
+    if: github.event.pull_request.draft == false
+    needs: build-cpp-gcc-no-optional-deps
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/linux-test
+        with: 
+          build-artifact: build-cpp-linux-gcc-latest-Release-part
 
   test-cpp-msvc:
+    if: github.event.pull_request.draft == false
     needs: build-cpp-msvc
     strategy:
       matrix:
@@ -91,9 +127,20 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/windows-test
         with: 
-          build-artifact: build-cpp-windows-msvc-${{ matrix.version }}-${{ matrix.config }}
+          build-artifact: build-cpp-windows-msvc-${{ matrix.version }}-${{ matrix.config }}-full
+
+  test-windows-no-optional-deps:
+    if: github.event.pull_request.draft == false
+    needs: build-cpp-msvc-no-optional-deps
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/windows-test
+        with: 
+          build-artifact: build-cpp-windows-msvc-latest-Release-part
 
   build-py:
+    if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     container:
       image: quay.io/pypa/manylinux2014_x86_64
@@ -102,6 +149,7 @@ jobs:
       - uses: ./.github/actions/build-py
           
   test-docs:
+    if: github.event.pull_request.draft == false
     needs: build-py
     runs-on: ubuntu-latest
     steps:
@@ -109,6 +157,7 @@ jobs:
       - uses: ./.github/actions/test-docs
 
   test-py:
+    if: github.event.pull_request.draft == false
     needs: build-py
     runs-on: ubuntu-latest
     steps:
@@ -116,6 +165,7 @@ jobs:
       - uses: ./.github/actions/test-py
 
   test-pylint:
+    if: github.event.pull_request.draft == false
     needs: build-py
     runs-on: ubuntu-latest
     steps:
@@ -123,6 +173,7 @@ jobs:
       - uses: ./.github/actions/test-pylint
 
   dowload-data:
+    if: github.event.pull_request.draft == false
     needs: build-py
     runs-on: ubuntu-latest
     continue-on-error: true
@@ -168,6 +219,7 @@ jobs:
           retention-days: 1
           
   codecov:
+    if: github.event.pull_request.draft == false
     needs: [test-py, test-cpp-gcc_clang]
     runs-on: ubuntu-latest
     steps:
@@ -191,6 +243,7 @@ jobs:
           verbose: true
 
   pages:
+    if: github.event.pull_request.draft == false
     needs: [test-py, test-cpp-gcc_clang, test-docs, test-pylint]
     runs-on: ubuntu-latest
     steps:
