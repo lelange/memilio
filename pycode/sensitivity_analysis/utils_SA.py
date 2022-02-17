@@ -1,10 +1,12 @@
-from epidemiology.secir import (UncertainContactMatrix, ContactMatrix, Damping, SecirModel,
-                                simulate, AgeGroup, Index_InfectionState, SecirSimulation, interpolate_simulation_result)
-from epidemiology.secir import InfectionState as State
+from memilio.simulation import UncertainContactMatrix, ContactMatrix, Damping
+from memilio.simulation.secir import SecirModel, simulate, AgeGroup, Index_InfectionState, SecirSimulation, interpolate_simulation_result
+from memilio.simulation.secir import InfectionState as State
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime, date
+
+import warnings
 
 def test_SA(hello):
     print(str(hello)+"!")
@@ -41,6 +43,9 @@ def simulate_model(params):
         model.parameters.ICUToHomeTime[AgeGroup(i)] = params["icu_to_home_time"]
         model.parameters.ICUToDeathTime[AgeGroup(i)] = params["icu_to_death_time"]
 
+        t_inf_asymp = 1.0 / (0.5 / (5.2 - 4.2)) + 0.5 * params["infectious_mild_time"]
+        model.parameters.InfectiousTimeAsymptomatic[AgeGroup(i)] = t_inf_asymp
+
         # Initial number of peaople in each compartment
         model.populations[AgeGroup(i), Index_InfectionState(State.Exposed)] = params["init_exposed"]
         model.populations[AgeGroup(i), Index_InfectionState(State.Carrier)] = params["init_carrier"]
@@ -49,7 +54,19 @@ def simulate_model(params):
         model.populations[AgeGroup(i), Index_InfectionState(State.ICU)] = params["init_ICU"]
         model.populations[AgeGroup(i), Index_InfectionState(State.Recovered)] = params["init_recovered"]
         model.populations[AgeGroup(i), Index_InfectionState(State.Dead)] = params["init_dead"]
-        model.populations.set_difference_from_total((AgeGroup(i), Index_InfectionState(State.Susceptible)), params["populations"][i])
+        model.populations.set_difference_from_group_total_AgeGroup((AgeGroup(i), Index_InfectionState(State.Susceptible)), params["populations"][i])
+        # print(model.populations[AgeGroup(i), Index_InfectionState(State.Exposed)].value)
+        # print(model.populations[AgeGroup(i), Index_InfectionState(State.Carrier)].value)
+        # print(model.populations[AgeGroup(i), Index_InfectionState(State.Infected)].value)
+        # print(model.populations[AgeGroup(i), Index_InfectionState(State.Hospitalized)].value)
+        # print(model.populations[AgeGroup(i), Index_InfectionState(State.ICU)].value)
+        # print(model.populations[AgeGroup(i), Index_InfectionState(State.Recovered)].value)
+        # print(model.populations[AgeGroup(i), Index_InfectionState(State.Dead)].value)
+        # print(model.populations[AgeGroup(i), Index_InfectionState(State.Susceptible)].value)
+        
+        # print("Population: ", params["populations"][i])
+        
+        
 
          # Compartment transition propabilities
         model.parameters.RelativeCarrierInfectability[AgeGroup(i)] = params["relative_carrier_infectability"]  
@@ -58,7 +75,7 @@ def simulate_model(params):
         model.parameters.RiskOfInfectionFromSympomatic[AgeGroup(i)] = params["risk_of_infection_from_symptomatic"]  # 0.05-0.5
         model.parameters.HospitalizedCasesPerInfectious[AgeGroup(i)] = params["hospitalized_cases_per_infectious"]  # 0.1-0.35
         model.parameters.ICUCasesPerHospitalized[AgeGroup(i)] = params["ICU_cases_per_hospitalized"]  # 0.15-0.4
-        model.parameters.DeathsPerHospitalized[AgeGroup(i)] = params["deaths_per_hospitalized"]  # 0.15-0.77
+        model.parameters.DeathsPerICU[AgeGroup(i)] = params["deaths_per_hospitalized"]  # 0.15-0.77
         model.parameters.MaxRiskOfInfectionFromSympomatic[AgeGroup(i)] = params["max_risk_of_infection_from_symptomatic"] # twice the value of RiskOfInfectionFromSymptomatic
 
     model.parameters.StartDay = params["start_day"]
@@ -69,13 +86,11 @@ def simulate_model(params):
     model.parameters.ContactPatterns.cont_freq_mat[0].minimum = params["minimum_contact_matrix"]
     # Define Damping on Contacts
     model.parameters.ContactPatterns.cont_freq_mat.add_damping(Damping(coeffs = np.ones((params["num_groups"], params["num_groups"])) * params["damping_coeff"], t = 30.0, level = 0, type = 0))
-    
-     # Apply mathematical constraints to parameters
+   
     model.apply_constraints()
 
     # Run Simulation
-    result = simulate(0, params["days"], params["dt"], model)
-
+    result = simulate(0, params["days"], params["dt"], model) 
     result = interpolate_simulation_result(result)
     
     # return maximal number of infected persons during the given time interval
@@ -203,3 +218,13 @@ def simulate_model(params):
                    minimum_contact_matrix = minimum_contact_matrix
 
 '''
+
+def generate_output_daywise(inputDesign, input_factor_names, static_params):
+    # how many timepoints does the integration return?
+    output = np.zeros((len(inputDesign), static_params["days"]+1))
+    
+    for i in range(len(inputDesign)):
+        result = simulate_model({**dict(zip(input_factor_names, inputDesign[i])), **static_params})
+        output[i] = result.T
+        
+    return output

@@ -1,6 +1,7 @@
-from epidemiology.secir import (UncertainContactMatrix, ContactMatrix, Damping, SecirModel,
-                                simulate, AgeGroup, Index_InfectionState, SecirSimulation)
-from epidemiology.secir import InfectionState as State
+from memilio.simulation import UncertainContactMatrix, ContactMatrix, Damping
+from memilio.simulation.secir import SecirModel, simulate, AgeGroup, Index_InfectionState, SecirSimulation
+from memilio.simulation.secir import InfectionState as State
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
