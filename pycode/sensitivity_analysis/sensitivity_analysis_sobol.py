@@ -72,6 +72,7 @@ comp_transition_duration = [
     "icu_to_home_time", 
     "icu_to_death_time"
 ]
+# TODO does this make sense? Intial values should just depend on the time.
 
 initial_numbers_comp = [
     "init_exposed", 

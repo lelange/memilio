@@ -113,9 +113,8 @@ def simulate_model(params):
     elif params["output_operation"] == "mean":
         output = np.mean(output, axis = 0)
 
-
-
-    #TODO: calculate max, integral etc. now or only return whole dataset?
+    output = np.squeeze(output)
+    
     return output
     
 
@@ -225,6 +224,6 @@ def generate_output_daywise(inputDesign, input_factor_names, static_params):
     
     for i in range(len(inputDesign)):
         result = simulate_model({**dict(zip(input_factor_names, inputDesign[i])), **static_params})
-        output[i] = result.T
+        output[i] = result
         
     return output
